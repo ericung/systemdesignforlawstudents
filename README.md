@@ -14,3 +14,19 @@ implement a law for this
 
 ### relational properties between two laws
 
+Example System
+
+```cypher
+CREATE
+(law1:Law { name: 'Law 1', subject: 'health'}),
+(law2:Law { name: 'Law 2', subject:'health'}),
+(law3:Law {name: 'Law 3', subject: 'medications'}),
+(law1)-[:RELATED_TO]->(law2),(law2)-[:RELATED_TO]->(law1),
+(law2)-[:RELATED_TO]->(law3)
+```
+
+```cypher
+MATCH(law:Law)-[:RELATED_TO]-(health) WHERE law.subject = 'health' return law,health
+```
+
+### Cases
