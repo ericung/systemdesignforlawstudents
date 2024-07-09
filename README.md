@@ -33,3 +33,7 @@ MATCH(law:Law)-[:RELATED_TO]-(health) WHERE law.subject = 'health' return law,he
 
 5150
 5585
+
+### References
+
+Furrow, B. R., Greaney, T. L., Johnson, S. H., Jost, T. S., Schwartz, R. L., Clark, B. R., Fuse Brown, E. C., Gatter, R., & King, J. S. (2018). Health law: Cases, materials, and Problems. West Academic Publishing. 
